@@ -1,0 +1,367 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: May 20, 2022 at 09:16 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `apprentice_system`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `apprentice`
+--
+
+CREATE TABLE `apprentice` (
+  `SN` int(11) NOT NULL,
+  `apprentice_no` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `trade` varchar(255) NOT NULL,
+  `department` varchar(255) NOT NULL,
+  `mobile` varchar(255) NOT NULL,
+  `from` date NOT NULL,
+  `to` date NOT NULL,
+  `Qualification` varchar(100) NOT NULL,
+  `punch_id` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `apprentice`
+--
+
+INSERT INTO `apprentice` (`SN`, `apprentice_no`, `name`, `trade`, `department`, `mobile`, `from`, `to`, `Qualification`, `punch_id`) VALUES
+(1, 'GC-2959', 'Prachi ', 'Civil', 'M & ES', '7465845277', '2020-12-07', '2021-12-06', 'B-Tech', '652959'),
+(2, 'GCS-2960', 'Sweeti Kushwaha ', 'CS', 'D&E-II', '9870884617', '2020-12-07', '2021-12-06', 'B.Tech', '652960'),
+(3, 'GCS-2961', 'Aman Bhandari', 'CS', 'M & ES', '8006402735', '2020-12-07', '2021-12-06', 'B.Tech', '652961'),
+(4, 'GCS-2962', 'Prateek Rawat', 'CS', 'PA', '8954052785', '2020-12-07', '2021-12-06', 'B.Tech', '652962'),
+(5, 'GEC-2963', 'Bhavna', 'E&C', 'D&E', '7017329039', '2020-12-07', '2021-12-06', 'B.Tech', '652963'),
+(6, 'GEC-2964', 'Ajit Khatri', 'E&C', 'D&E-I', '7409092494', '2020-12-07', '2021-12-06', 'B.Tech', '652964'),
+(7, 'GEC-2965', 'Mukul Kumar', 'E&C', 'PA', '7351273260', '2020-12-07', '2021-12-06', 'B.Tech', '652965'),
+(8, 'GEC-2967', 'Ankit Rawat', 'E&C', 'PA', '8556044093', '2020-12-07', '2021-12-06', 'B.Tech', '652967'),
+(9, 'GEC-2968', 'Gaurav Kumar', 'E&C', 'PA', '7505638266', '2020-12-07', '2021-12-06', 'B.Tech', '652968'),
+(10, 'GM-2969', 'Prateek Majoomdar', 'Mechanical', 'NVD', '9639050188', '2020-12-07', '2021-12-06', 'B.Tech', '652969'),
+(11, 'GM-2970', 'Suha Islam', 'Mechanical', 'CPS/ FAB', '9412946980', '2020-12-07', '2021-12-06', 'B.Tech', '652970'),
+(12, 'GM-2971', 'Shivm Jaydhar', 'Mechanical', 'OPS/SC', '9368008149', '2020-12-07', '2021-12-06', 'B.Tech', '652971'),
+(13, 'GM-2972', 'Archana', 'Mechanical', 'OPS / MM', '9456345542', '2020-12-07', '2021-12-06', 'B.Tech', '652972'),
+(14, 'GM-2973', 'Kartik Maheshwari ', 'Mechanical', 'OPS/SC', '9756773956', '2020-12-07', '2021-12-06', 'B.Tech', '652973'),
+(15, 'GM-2974', 'Nitish Kumar', 'Mechanical', 'OPS / ASSY-II', '8077128939', '2020-12-07', '2021-12-06', 'B.Tech', '652974'),
+(16, 'GM-2975', 'Vaishnavi Pandey', 'Mechanical', 'OPS / ASSY-I', '8382885907', '2020-12-07', '2021-12-06', 'B.Tech', '652975'),
+(17, 'GM-2976', 'Mohd Faizan', 'Mechanical', 'OPS / MM', '6397907189', '2020-12-07', '2021-12-06', 'B.Tech', '652976'),
+(18, 'GM-2978', 'Vikas ', 'Mechanical', 'OPS / ASSY-I', '9058712339', '2020-12-07', '2021-12-06', 'B.Tech', '652978'),
+(19, 'TAC-2979', 'Pramila Bhandari', 'Civil Engg.', 'ES/CIVIL', '8449731023', '2021-01-25', '2022-01-24', 'Diploma', '652979'),
+(20, 'TAC-2980', 'Vikash Ved', 'Civil Engg.', 'ES/CIVIL', '9639643401', '2021-01-25', '2022-01-24', 'Diploma', '652980'),
+(21, 'TACS-2981', 'Sachin Kumar', 'CS', 'D&E ', '9634656175', '2021-01-25', '2022-01-24', 'Diploma', '652981'),
+(22, 'TACS-2982', 'Neha', 'CS', 'D&E ', '8126437839', '2021-01-25', '2022-01-24', 'Diploma', '652982'),
+(23, 'TAEL-2983', 'Sawan Ramola', 'Electrical Engg.', 'ES/ELECTRICAL', '9193693001', '2021-01-25', '2022-01-24', 'Diploma', '652983'),
+(24, 'TAEL-2984', 'Shamsheed Ahmad', 'Electrical Engg.', 'ES/ELECTRICAL', '8191916018', '2021-01-25', '2022-01-24', 'Diploma', '652984'),
+(25, 'TAEC-2985', 'Km.Vaishali Chauhan', 'Electronics Engg.', 'ASSY.2', '7455848545', '2021-01-25', '2022-01-24', 'Diploma', '652985'),
+(26, 'TAEC-2986', 'Shivani Negi', 'Electronics Engg.', 'TESTING', '8171861204', '2021-01-25', '2022-01-24', 'Diploma', '652986'),
+(27, 'TAEC-2987', 'Raman Singh', 'Electronics Engg.', 'NVD', '8650138776', '2021-01-25', '2022-01-24', 'Diploma', '652987'),
+(28, 'TAEC-2988', 'Sagar Singh Rawat', 'Electronics Engg.', 'ASSY.2', '8368627002', '2021-01-25', '2022-01-24', 'Diploma', '652988'),
+(29, 'TAEC-2989', 'Ayush Jadli', 'Electronics Engg.', 'ASSY.2', '8979522844', '2021-01-25', '2022-01-24', 'Diploma', '652989'),
+(30, 'TAEC-2990', 'Sachin Rawat', 'Electronics Engg.', 'NVD', '7017117861', '2021-01-25', '2022-01-24', 'Diploma', '652990'),
+(31, 'TAEC-2991', 'Saurabh Negi', 'Electronics Engg.', 'TESTING', '7417056777', '2021-01-25', '2022-01-24', 'Diploma', '652991'),
+(32, 'TAEC-2992', 'Sandeep Kumar', 'Electronics Engg.', 'MRI', '7088744876', '2021-01-25', '2022-01-24', 'Diploma', '652992'),
+(33, 'TAEC-2993', 'Sandeep Kumar', 'Electronics Engg.', 'NVD', '9675345131', '2021-01-25', '2022-01-24', 'Diploma', '652993'),
+(34, 'TAEC-2994', 'Km Sheetal Rani', 'Electronics Engg.', 'PA/Testing', '7906636095 8394900000', '2021-01-25', '2022-01-24', 'Diploma', '652994'),
+(35, 'TAEC-2995', 'Rajat Kumar', 'Electronics Engg.', 'D&E', '7210721767', '2021-01-25', '2022-01-24', 'Diploma', '652995'),
+(36, 'TAEC-2996', 'Shubham Kumar', 'Electronics Engg.', 'D&E', '9045475474', '2021-01-25', '2022-01-24', 'Diploma', '652996'),
+(37, 'TAEC-2997', 'Suraj Singh ', 'Electronics Engg.', 'D&E', ' ', '2021-01-25', '2022-01-24', 'Diploma', '652997'),
+(38, 'TAMOM-2998', 'Shivani', 'M.O.M SP', 'HRD', '6396914945', '2021-01-25', '2022-01-24', 'Diploma', '652998'),
+(39, 'TAMOM-2999', 'Sonu Chand', 'M.O.M SP', 'SECURITY', '7900544200', '2021-01-25', '2022-01-24', 'Diploma', '652999'),
+(40, 'TAMOM-3000', 'Ankita Rawat', 'M.O.M SP', 'HR', '8433063875', '2021-01-25', '2022-01-24', 'Diploma', '653000'),
+(41, 'TAMOM-3001', 'Mamta Kohli', 'M.O.M SP', 'MM/CPMT', '9536837602', '2021-01-25', '2022-01-24', 'Diploma', '653001'),
+(42, 'TAM-3002', 'Himanshu Kukreti', 'Mechanical Engg.', 'TESTING', '8449815922', '2021-01-25', '2022-01-24', 'Diploma', '653002'),
+(43, 'TAM-3003', 'Shahrukh Ahmad', 'Mechanical Engg.', ' ( ENVT) Lab', '6398753769', '2021-01-25', '2022-01-24', 'Diploma', '653003'),
+(44, 'TAM-3004', 'Tejpal Singh Rawat', 'Mechanical Engg.', 'NVD', '7465010907', '2021-01-25', '2022-01-24', 'Diploma', '653004'),
+(45, 'TAM-3005', 'Rahul Kumar', 'Mechanical Engg.', 'PPC', '8954419792', '2021-01-25', '2022-01-24', 'Diploma', '653005'),
+(46, 'TAM-3006', 'Mohit Kumar', 'Mechanical Engg.', 'ASSY - I /SMT', '8445684582', '2021-01-25', '2022-01-24', 'Diploma', '653006'),
+(47, 'TAM-3007', 'Amit Kumar', 'Mechanical Engg.', 'ASSY - I /SMT', '9411558510', '2021-01-25', '2022-01-24', 'Diploma', '653007'),
+(48, 'TAM-3008', 'Saurabh Singh', 'Mechanical Engg.', 'NVD', '8979474027', '2021-01-25', '2022-01-24', 'Diploma', '653008'),
+(49, 'TAM- 3009', 'Harshit Kumar', 'Mechanical Engg.', 'D&E- I', '9149231346', '2021-02-15', '2021-02-14', 'Diploma', '65 3009'),
+(50, 'TAEC-3010', 'Preeti', 'Electronics Engg.', 'Testing', '8279586570', '2022-02-15', '2022-02-14', 'Diploma', '653010'),
+(51, 'TAEL-3011', 'Chiranjeet Pal', 'Electrical Engg.', 'ES/ELECTRICAL', '9027325122', '2023-02-15', '2023-02-14', 'Diploma', '653011'),
+(52, 'C-2888', 'RADHA PAL', 'COPA', 'PA / TESTING', '8192888026', '2020-09-21', '2021-09-20', 'I.T.I.', '652888'),
+(53, 'C-2889', 'YOGESH KUMAR', 'COPA', 'HRD', '9557403116', '2020-09-21', '2021-09-20', 'I.T.I.', '652889'),
+(54, 'C-2890', 'ARBAZ MALIK', 'COPA', 'SECURITY', '9548830084', '2020-09-21', '2021-09-20', 'I.T.I.', '652890'),
+(55, 'C-2891', 'MONIKA DEVI', 'COPA', 'PA / MRI', '7465006415', '2020-09-21', '2021-09-20', 'I.T.I.', '652891'),
+(56, 'DC-2892', 'ROHIT CHAUHAN', 'DRAUGHTSMAN CIVIL', 'CIVIL', '9458183105', '2020-09-21', '2021-09-20', 'I.T.I.', '652892'),
+(57, 'E-2893', 'ROHIT KUMAR JEWARIYA', 'ELECTRICIAN', 'ES / ELECTRICAL', '7088661741', '2020-09-21', '2021-09-20', 'I.T.I.', '652893'),
+(58, 'E-2894', 'RAKESH KUMAR', 'ELECTRICIAN', 'ES / ELECTRICAL', '8791767400', '2020-09-21', '2021-09-20', 'I.T.I.', '652894'),
+(59, 'E-2895', 'ARJUN SINGH', 'ELECTRICIAN', 'ES / ELECTRICAL', '9084939712', '2020-09-21', '2021-09-20', 'I.T.I.', '652895'),
+(60, 'E-2896', 'GAUTAM KUMAR', 'ELECTRICIAN', 'ES / ELECTRICAL', '8958786200', '2020-09-21', '2021-09-20', 'I.T.I.', '652896'),
+(61, 'EM-2897', 'MUKUL CHAUHAN', 'ELECTRONIC MECHANICS', 'PA / INSPECTION', '7895064546', '2020-09-21', '2021-09-20', 'I.T.I.', '652897'),
+(62, 'EM-2898', 'NIRMAL KAUR', 'ELECTRONIC MECHANICS', 'PA/ TESTING', '8859185580', '2020-09-21', '2021-09-20', 'I.T.I.', '652898'),
+(63, 'EM-2899', 'SATISH KUMAR', 'ELECTRONIC MECHANICS', 'PA/ TESTING', '7500358408', '2020-09-21', '2021-09-20', 'I.T.I.', '652899'),
+(64, 'EM-2900', 'MOHD ARSHAD', 'ELECTRONIC MECHANICS', 'PA / TESTING', '6398627001', '2020-09-21', '2021-09-20', 'I.T.I.', '652900'),
+(65, 'EM-2901', 'SANJEEV KUMAR', 'ELECTRONIC MECHANICS', 'PA / MRI', '9389972598', '2020-09-21', '2021-09-20', 'I.T.I.', '652901'),
+(66, 'EM-2903', 'NITU RANI', 'ELECTRONIC MECHANICS', 'PA / TESTING', '7533988761', '2020-09-21', '2021-09-20', 'I.T.I.', '652903'),
+(67, 'EM-2904', 'ANMOL', 'ELECTRONIC MECHANICS', 'PA / TESTING', '7895973603', '2020-09-21', '2021-09-20', 'I.T.I.', '652904'),
+(68, 'EM-2905', 'GAURAV KUMAR DHULIAYA', 'ELECTRONIC MECHANICS', 'PA / TESTING', '9368042592', '2020-09-21', '2021-09-20', 'I.T.I.', '652905'),
+(69, 'EM-2906', 'SANJEEV KUMAR', 'ELECTRONIC MECHANICS', 'PA / ENV', '6396871893', '2020-09-21', '2021-09-20', 'I.T.I.', '652906'),
+(70, 'EM-2907', 'SUMIT KUMAR RAJPUT', 'ELECTRONIC MECHANICS', 'PA  / INSPECTION', '8384825212', '2020-09-21', '2021-09-20', 'I.T.I.', '652907'),
+(71, 'EM-2908', 'VIKAS KUMAR', 'ELECTRONIC MECHANICS', 'PA / TESTING', '9568328738/9536302713', '2020-09-21', '2021-09-20', 'I.T.I.', '652908'),
+(72, 'EM-2909', 'RISHABH CHAUHAN', 'ELECTRONIC MECHANICS', 'PA/ TESTING', '6397358166', '2020-09-21', '2021-09-20', 'I.T.I.', '652909'),
+(73, 'EM-2910', 'YASHVANI KUMAR', 'ELECTRONIC MECHANICS', 'PA / TES', '9457706801', '2020-09-21', '2021-09-20', 'I.T.I.', '652910'),
+(74, 'EM-2911', 'MANOJ KUMAR', 'ELECTRONIC MECHANICS', 'PA/ TESTING', '8449081693', '2020-09-21', '2021-09-20', 'I.T.I.', '652911'),
+(75, 'EM-2913', 'ARVIND KUMAR', 'ELECTRONIC MECHANICS', 'PA / EO', '9917685217', '2020-09-21', '2021-09-20', 'I.T.I.', '652913'),
+(76, 'EM-2914', 'RAHUL KUMAR', 'ELECTRONIC MECHANICS', 'PA / EO', '9756114782', '2020-09-21', '2021-09-20', 'I.T.I.', '652914'),
+(77, 'EM-2915', 'RAHUL KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-PROD', '8476886860', '2020-09-21', '2021-09-20', 'I.T.I.', '652915'),
+(78, 'EM-2916', 'HEMANT KUMAR', 'ELECTRONIC MECHANICS', 'TES', '9997072405', '2020-09-21', '2021-09-20', 'I.T.I.', '652916'),
+(79, 'EM-2917', 'HARVENDAR SINGH', 'ELECTRONIC MECHANICS', 'ASSY-NVD', '8449706494', '2020-09-21', '2021-09-20', 'I.T.I.', '652917'),
+(80, 'EM-2918', 'PRASHANT KUMAR LAMBA', 'ELECTRONIC MECHANICS', 'ASSY-NVD', '9058641700', '2020-09-21', '2021-09-20', 'I.T.I.', '652918'),
+(81, 'EM-2919', 'MANGLESH', 'ELECTRONIC MECHANICS', 'HOLDING / STORE', '7017602387', '2020-09-21', '2021-09-20', 'I.T.I.', '652919'),
+(82, 'EM-2920', 'DHARMVEER', 'ELECTRONIC MECHANICS', '  MCT ', '9548626508', '2020-09-21', '2021-09-20', 'I.T.I.', '652920'),
+(83, 'EM-2921', 'SACHIN KUMAR', 'ELECTRONIC MECHANICS', 'MM', '9758243052', '2020-09-21', '2021-09-20', 'I.T.I.', '652921'),
+(84, 'EM-2922', 'VINIT KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-NVD', '8006821369', '2020-09-21', '2021-09-20', 'I.T.I.', '652922'),
+(85, 'EM-2923', 'VIPIN KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-PROD', '9997326380', '2020-09-21', '2021-09-20', 'I.T.I.', '652923'),
+(86, 'EM-2924', 'ASHISH VASHISTH', 'ELECTRONIC MECHANICS', 'PPC', '9084492991', '2020-09-21', '2021-09-20', 'I.T.I.', '652924'),
+(87, 'EM-2925', 'DHARAM SINGH', 'ELECTRONIC MECHANICS', 'CMPT', '8057118564', '2020-09-21', '2021-09-20', 'I.T.I.', '652925'),
+(88, 'EM-2926', 'DEEPAK KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-PROD', '7500002532', '2020-09-21', '2021-09-20', 'I.T.I.', '652926'),
+(89, 'EM-2927', 'VIJAY KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-PROD', '6395250328', '2020-09-21', '2021-09-20', 'I.T.I.', '652927'),
+(90, 'EM-2928', 'PRADUMAN KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-PROD', '8433242620', '2020-09-21', '2021-09-20', 'I.T.I.', '652928'),
+(91, 'EM-2929', 'ANKIT NEGI', 'ELECTRONIC MECHANICS', 'ASSY', '8126312308', '2020-09-21', '2021-09-20', 'I.T.I.', '652929'),
+(92, 'EM-2930', 'RAHUL KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-PROD', '7017802982', '2020-09-21', '2021-09-20', 'I.T.I.', '652930'),
+(93, 'F-2931', 'SHUDHANSHU KUMAR', 'FITTER', 'PA / ENV', '6399158280', '2020-09-21', '2021-09-20', 'I.T.I.', '652931'),
+(94, 'F-2932', 'SACHIN KUMAR', 'FITTER', 'PA / MRI', '9458491818', '2020-09-21', '2021-09-20', 'I.T.I.', '652932'),
+(95, 'F-2933', 'RABINDRA KUMAR ', 'FITTER', 'ASSY-PROD', '9927279887', '2020-09-21', '2021-09-20', 'I.T.I.', '652933'),
+(96, 'F-2934', 'SACHIN KUMAR', 'FITTER', 'DARK-ROOM', '7060307916', '2020-09-21', '2021-09-20', 'I.T.I.', '652934'),
+(97, 'F-2935', 'SIDHART GAUTAM', 'FITTER', 'PPC', '7505342319', '2020-09-21', '2021-09-20', 'I.T.I.', '652935'),
+(98, 'F-2936', 'VISHESH KUMAR', 'FITTER', 'CPS / FAB', '8077495548', '2020-09-21', '2021-09-20', 'I.T.I.', '652936'),
+(99, 'F-2937', 'SUNEEL SINGH', 'FITTER', 'CPS / FAB', '9639811096', '2020-09-21', '2021-09-20', 'I.T.I.', '652937'),
+(100, 'F-2938', 'JITENDRA SINGH', 'FITTER', 'ASSY-NVD', '9690265697', '2020-09-21', '2021-09-20', 'I.T.I.', '652938'),
+(101, 'F-2939', 'RITU MOURYA', 'FITTER', 'CPS / FAB', '8650535548', '2020-09-21', '2021-09-20', 'I.T.I.', '652939'),
+(102, 'F-2940', 'MILAN SINGH', 'FITTER', 'MM', '9411353113', '2020-09-21', '2021-09-20', 'I.T.I.', '652940'),
+(103, 'F-2941', 'RAVINDRA KUMAR ', 'FITTER', 'PA / MRI', '9105211635', '2020-09-21', '2021-09-20', 'I.T.I.', '652941'),
+(104, 'F-2942', 'SAURABH KUMAR', 'FITTER', 'ASSY-NVD', '6399098009', '2020-09-21', '2021-09-20', 'I.T.I.', '652942'),
+(105, 'F-2943', 'RIGVENDRA KUMAR', 'FITTER', 'CPS / FAB', '6398499452', '2020-09-21', '2021-09-20', 'I.T.I.', '652943'),
+(106, 'F-2944', 'ANKIT KUMAR', 'FITTER', 'CPS / FAB', '8859198571', '2020-09-21', '2021-09-20', 'I.T.I.', '652944'),
+(107, 'F-2945', 'ANIKET KUMAR', 'FITTER', 'CPS / FAB', '8954969618', '2020-09-21', '2021-09-20', 'I.T.I.', '652945'),
+(108, 'F-2946', 'HIMANSHU BHATYAN', 'FITTER', 'PA / MRI', '9627316441', '2020-09-21', '2021-09-20', 'I.T.I.', '652946'),
+(109, 'F-2947', 'ASWANI KUMAR', 'FITTER', 'ES /AC PLANT', '7900691733', '2020-09-21', '2021-09-20', 'I.T.I.', '652947'),
+(110, 'RAC-2948', 'AKSHAY DWIVEDI', 'MECHANIC R&AC', 'AC / ES', '8273216460', '2020-09-21', '2021-09-20', 'I.T.I.', '652948'),
+(111, 'RAC-2949', 'RAJA', 'MECHANIC R&AC', 'AC / ES', '8171555876', '2020-09-21', '2021-09-20', 'I.T.I.', '652949'),
+(112, 'T-2950', 'AJAY KUMAR', 'TURNER', 'CPS / FAB', '9997537452', '2020-09-21', '2021-09-20', 'I.T.I.', '652950'),
+(113, 'E-2951', 'RAJAN KUMAR', 'ELECTRICIAN', 'ES / ELECTRICAL', '7895615872', '2020-09-23', '2021-09-22', 'I.T.I.', '652951'),
+(114, 'EM-2952', 'AAKASH KUMAR', 'ELECTRONIC MECHANICS', 'ASSY', '7351099919', '2020-09-23', '2021-09-22', 'I.T.I.', '652952'),
+(115, 'F-2953', 'SHEFALI PAL', 'FITTER', 'CMPT', '8218750039', '2020-09-23', '2021-09-22', 'I.T.I.', '652953'),
+(116, 'M-2954', 'SHIKHA PANDEY', 'MACHINIST', 'CPS / FAB', '9389646278', '2020-09-23', '2021-09-22', 'I.T.I.', '652954'),
+(117, 'EM-2955', 'ASHISH SINGH', 'ELECTRONIC MECHANICS', 'PA / TESTING', '8937921076', '2020-10-05', '2021-10-04', 'I.T.I.', '652955'),
+(118, 'EM-2956', 'GIRIRAJ SINGH', 'ELECTRONIC MECHANICS', 'PA / TESTING', '8937000354/9012810040', '2020-10-05', '2021-10-04', 'I.T.I.', '652956'),
+(119, 'F-2957', 'KARAN SINGH', 'FITTER', 'FINISHING / PLTG', '7599123990', '2020-10-05', '2021-10-04', 'I.T.I.', '652957'),
+(120, 'W-2958', 'SANJU', 'WELDER', 'CPS / FAB', '9756385278', '2020-10-05', '2021-10-04', 'I.T.I.', '652958'),
+(121, 'GCS-2960', 'Sweeti Kushwaha ', 'CS', 'D&E-II', '9870884617', '2020-12-07', '2021-12-06', 'B.Tech', '652960'),
+(122, 'GCS-2961', 'Aman Bhandari', 'CS', 'M & ES', '8006402735', '2020-12-07', '2021-12-06', 'B.Tech', '652961'),
+(123, 'GCS-2962', 'Prateek Rawat', 'CS', 'PA', '8954052785', '2020-12-07', '2021-12-06', 'B.Tech', '652962'),
+(124, 'GEC-2963', 'Bhavna', 'E&C', 'D&E', '7017329039', '2020-12-07', '2021-12-06', 'B.Tech', '652963'),
+(125, 'GEC-2964', 'Ajit Khatri', 'E&C', 'D&E-I', '7409092494', '2020-12-07', '2021-12-06', 'B.Tech', '652964'),
+(126, 'GEC-2965', 'Mukul Kumar', 'E&C', 'PA', '7351273260', '2020-12-07', '2021-12-06', 'B.Tech', '652965'),
+(127, 'GEC-2967', 'Ankit Rawat', 'E&C', 'PA', '8556044093', '2020-12-07', '2021-12-06', 'B.Tech', '652967'),
+(128, 'GEC-2968', 'Gaurav Kumar', 'E&C', 'PA', '7505638266', '2020-12-07', '2021-12-06', 'B.Tech', '652968'),
+(129, 'GM-2969', 'Prateek Majoomdar', 'Mechanical', 'NVD', '9639050188', '2020-12-07', '2021-12-06', 'B.Tech', '652969'),
+(130, 'GM-2970', 'Suha Islam', 'Mechanical', 'CPS/ FAB', '9412946980', '2020-12-07', '2021-12-06', 'B.Tech', '652970'),
+(131, 'GM-2971', 'Shivm Jaydhar', 'Mechanical', 'OPS/SC', '9368008149', '2020-12-07', '2021-12-06', 'B.Tech', '652971'),
+(132, 'GM-2972', 'Archana', 'Mechanical', 'OPS / MM', '9456345542', '2020-12-07', '2021-12-06', 'B.Tech', '652972'),
+(133, 'GM-2973', 'Kartik Maheshwari ', 'Mechanical', 'OPS/SC', '9756773956', '2020-12-07', '2021-12-06', 'B.Tech', '652973'),
+(134, 'GM-2974', 'Nitish Kumar', 'Mechanical', 'OPS / ASSY-II', '8077128939', '2020-12-07', '2021-12-06', 'B.Tech', '652974'),
+(135, 'GM-2975', 'Vaishnavi Pandey', 'Mechanical', 'OPS / ASSY-I', '8382885907', '2020-12-07', '2021-12-06', 'B.Tech', '652975'),
+(136, 'GM-2976', 'Mohd Faizan', 'Mechanical', 'OPS / MM', '6397907189', '2020-12-07', '2021-12-06', 'B.Tech', '652976'),
+(137, 'GM-2978', 'Vikas ', 'Mechanical', 'OPS / ASSY-I', '9058712339', '2020-12-07', '2021-12-06', 'B.Tech', '652978'),
+(138, 'TAC-2979', 'Pramila Bhandari', 'Civil Engg.', 'ES/CIVIL', '8449731023', '2021-01-25', '2022-01-24', 'Diploma', '652979'),
+(139, 'TAC-2980', 'Vikash Ved', 'Civil Engg.', 'ES/CIVIL', '9639643401', '2021-01-25', '2022-01-24', 'Diploma', '652980'),
+(140, 'TACS-2981', 'Sachin Kumar', 'CS', 'D&E ', '9634656175', '2021-01-25', '2022-01-24', 'Diploma', '652981'),
+(141, 'TACS-2982', 'Neha', 'CS', 'D&E ', '8126437839', '2021-01-25', '2022-01-24', 'Diploma', '652982'),
+(142, 'TAEL-2983', 'Sawan Ramola', 'Electrical Engg.', 'ES/ELECTRICAL', '9193693001', '2021-01-25', '2022-01-24', 'Diploma', '652983'),
+(143, 'TAEL-2984', 'Shamsheed Ahmad', 'Electrical Engg.', 'ES/ELECTRICAL', '8191916018', '2021-01-25', '2022-01-24', 'Diploma', '652984'),
+(144, 'TAEC-2985', 'Km.Vaishali Chauhan', 'Electronics Engg.', 'ASSY.2', '7455848545', '2021-01-25', '2022-01-24', 'Diploma', '652985'),
+(145, 'TAEC-2986', 'Shivani Negi', 'Electronics Engg.', 'TESTING', '8171861204', '2021-01-25', '2022-01-24', 'Diploma', '652986'),
+(146, 'TAEC-2987', 'Raman Singh', 'Electronics Engg.', 'NVD', '8650138776', '2021-01-25', '2022-01-24', 'Diploma', '652987'),
+(147, 'TAEC-2988', 'Sagar Singh Rawat', 'Electronics Engg.', 'ASSY.2', '8368627002', '2021-01-25', '2022-01-24', 'Diploma', '652988'),
+(148, 'TAEC-2989', 'Ayush Jadli', 'Electronics Engg.', 'ASSY.2', '8979522844', '2021-01-25', '2022-01-24', 'Diploma', '652989'),
+(149, 'TAEC-2990', 'Sachin Rawat', 'Electronics Engg.', 'NVD', '7017117861', '2021-01-25', '2022-01-24', 'Diploma', '652990'),
+(150, 'TAEC-2991', 'Saurabh Negi', 'Electronics Engg.', 'TESTING', '7417056777', '2021-01-25', '2022-01-24', 'Diploma', '652991'),
+(151, 'TAEC-2992', 'Sandeep Kumar', 'Electronics Engg.', 'MRI', '7088744876', '2021-01-25', '2022-01-24', 'Diploma', '652992'),
+(152, 'TAEC-2993', 'Sandeep Kumar', 'Electronics Engg.', 'NVD', '9675345131', '2021-01-25', '2022-01-24', 'Diploma', '652993'),
+(153, 'TAEC-2994', 'Km Sheetal Rani', 'Electronics Engg.', 'PA/Testing', '7906636095 8394900000', '2021-01-25', '2022-01-24', 'Diploma', '652994'),
+(154, 'TAEC-2995', 'Rajat Kumar', 'Electronics Engg.', 'D&E', '7210721767', '2021-01-25', '2022-01-24', 'Diploma', '652995'),
+(155, 'TAEC-2996', 'Shubham Kumar', 'Electronics Engg.', 'D&E', '9045475474', '2021-01-25', '2022-01-24', 'Diploma', '652996'),
+(156, 'TAEC-2997', 'Suraj Singh ', 'Electronics Engg.', 'D&E', ' ', '2021-01-25', '2022-01-24', 'Diploma', '652997'),
+(157, 'TAMOM-2998', 'Shivani', 'M.O.M SP', 'HRD', '6396914945', '2021-01-25', '2022-01-24', 'Diploma', '652998'),
+(158, 'TAMOM-2999', 'Sonu Chand', 'M.O.M SP', 'SECURITY', '7900544200', '2021-01-25', '2022-01-24', 'Diploma', '652999'),
+(159, 'TAMOM-3000', 'Ankita Rawat', 'M.O.M SP', 'HR', '8433063875', '2021-01-25', '2022-01-24', 'Diploma', '653000'),
+(160, 'TAMOM-3001', 'Mamta Kohli', 'M.O.M SP', 'MM/CPMT', '9536837602', '2021-01-25', '2022-01-24', 'Diploma', '653001'),
+(161, 'TAM-3002', 'Himanshu Kukreti', 'Mechanical Engg.', 'TESTING', '8449815922', '2021-01-25', '2022-01-24', 'Diploma', '653002'),
+(162, 'TAM-3003', 'Shahrukh Ahmad', 'Mechanical Engg.', ' ( ENVT) Lab', '6398753769', '2021-01-25', '2022-01-24', 'Diploma', '653003'),
+(163, 'TAM-3004', 'Tejpal Singh Rawat', 'Mechanical Engg.', 'NVD', '7465010907', '2021-01-25', '2022-01-24', 'Diploma', '653004'),
+(164, 'TAM-3005', 'Rahul Kumar', 'Mechanical Engg.', 'PPC', '8954419792', '2021-01-25', '2022-01-24', 'Diploma', '653005'),
+(165, 'TAM-3006', 'Mohit Kumar', 'Mechanical Engg.', 'ASSY - I /SMT', '8445684582', '2021-01-25', '2022-01-24', 'Diploma', '653006'),
+(166, 'TAM-3007', 'Amit Kumar', 'Mechanical Engg.', 'ASSY - I /SMT', '9411558510', '2021-01-25', '2022-01-24', 'Diploma', '653007'),
+(167, 'TAM-3008', 'Saurabh Singh', 'Mechanical Engg.', 'NVD', '8979474027', '2021-01-25', '2022-01-24', 'Diploma', '653008'),
+(168, 'TAM- 3009', 'Harshit Kumar', 'Mechanical Engg.', 'D&E- I', '9149231346', '2021-02-15', '2021-02-14', 'Diploma', '65 3009'),
+(169, 'TAEC-3010', 'Preeti', 'Electronics Engg.', 'Testing', '8279586570', '2022-02-15', '2022-02-14', 'Diploma', '653010'),
+(170, 'TAEL-3011', 'Chiranjeet Pal', 'Electrical Engg.', 'ES/ELECTRICAL', '9027325122', '2023-02-15', '2023-02-14', 'Diploma', '653011'),
+(171, 'C-2888', 'RADHA PAL', 'COPA', 'PA / TESTING', '8192888026', '2020-09-21', '2021-09-20', 'I.T.I.', '652888'),
+(172, 'C-2889', 'YOGESH KUMAR', 'COPA', 'HRD', '9557403116', '2020-09-21', '2021-09-20', 'I.T.I.', '652889'),
+(173, 'C-2890', 'ARBAZ MALIK', 'COPA', 'SECURITY', '9548830084', '2020-09-21', '2021-09-20', 'I.T.I.', '652890'),
+(174, 'C-2891', 'MONIKA DEVI', 'COPA', 'PA / MRI', '7465006415', '2020-09-21', '2021-09-20', 'I.T.I.', '652891'),
+(175, 'DC-2892', 'ROHIT CHAUHAN', 'DRAUGHTSMAN CIVIL', 'CIVIL', '9458183105', '2020-09-21', '2021-09-20', 'I.T.I.', '652892'),
+(176, 'E-2893', 'ROHIT KUMAR JEWARIYA', 'ELECTRICIAN', 'ES / ELECTRICAL', '7088661741', '2020-09-21', '2021-09-20', 'I.T.I.', '652893'),
+(177, 'E-2894', 'RAKESH KUMAR', 'ELECTRICIAN', 'ES / ELECTRICAL', '8791767400', '2020-09-21', '2021-09-20', 'I.T.I.', '652894'),
+(178, 'E-2895', 'ARJUN SINGH', 'ELECTRICIAN', 'ES / ELECTRICAL', '9084939712', '2020-09-21', '2021-09-20', 'I.T.I.', '652895'),
+(179, 'E-2896', 'GAUTAM KUMAR', 'ELECTRICIAN', 'ES / ELECTRICAL', '8958786200', '2020-09-21', '2021-09-20', 'I.T.I.', '652896'),
+(180, 'EM-2897', 'MUKUL CHAUHAN', 'ELECTRONIC MECHANICS', 'PA / INSPECTION', '7895064546', '2020-09-21', '2021-09-20', 'I.T.I.', '652897'),
+(181, 'EM-2898', 'NIRMAL KAUR', 'ELECTRONIC MECHANICS', 'PA/ TESTING', '8859185580', '2020-09-21', '2021-09-20', 'I.T.I.', '652898'),
+(182, 'EM-2899', 'SATISH KUMAR', 'ELECTRONIC MECHANICS', 'PA/ TESTING', '7500358408', '2020-09-21', '2021-09-20', 'I.T.I.', '652899'),
+(183, 'EM-2900', 'MOHD ARSHAD', 'ELECTRONIC MECHANICS', 'PA / TESTING', '6398627001', '2020-09-21', '2021-09-20', 'I.T.I.', '652900'),
+(184, 'EM-2901', 'SANJEEV KUMAR', 'ELECTRONIC MECHANICS', 'PA / MRI', '9389972598', '2020-09-21', '2021-09-20', 'I.T.I.', '652901'),
+(185, 'EM-2903', 'NITU RANI', 'ELECTRONIC MECHANICS', 'PA / TESTING', '7533988761', '2020-09-21', '2021-09-20', 'I.T.I.', '652903'),
+(186, 'EM-2904', 'ANMOL', 'ELECTRONIC MECHANICS', 'PA / TESTING', '7895973603', '2020-09-21', '2021-09-20', 'I.T.I.', '652904'),
+(187, 'EM-2905', 'GAURAV KUMAR DHULIAYA', 'ELECTRONIC MECHANICS', 'PA / TESTING', '9368042592', '2020-09-21', '2021-09-20', 'I.T.I.', '652905'),
+(188, 'EM-2906', 'SANJEEV KUMAR', 'ELECTRONIC MECHANICS', 'PA / ENV', '6396871893', '2020-09-21', '2021-09-20', 'I.T.I.', '652906'),
+(189, 'EM-2907', 'SUMIT KUMAR RAJPUT', 'ELECTRONIC MECHANICS', 'PA  / INSPECTION', '8384825212', '2020-09-21', '2021-09-20', 'I.T.I.', '652907'),
+(190, 'EM-2908', 'VIKAS KUMAR', 'ELECTRONIC MECHANICS', 'PA / TESTING', '9568328738/9536302713', '2020-09-21', '2021-09-20', 'I.T.I.', '652908'),
+(191, 'EM-2909', 'RISHABH CHAUHAN', 'ELECTRONIC MECHANICS', 'PA/ TESTING', '6397358166', '2020-09-21', '2021-09-20', 'I.T.I.', '652909'),
+(192, 'EM-2910', 'YASHVANI KUMAR', 'ELECTRONIC MECHANICS', 'PA / TES', '9457706801', '2020-09-21', '2021-09-20', 'I.T.I.', '652910'),
+(193, 'EM-2911', 'MANOJ KUMAR', 'ELECTRONIC MECHANICS', 'PA/ TESTING', '8449081693', '2020-09-21', '2021-09-20', 'I.T.I.', '652911'),
+(194, 'EM-2913', 'ARVIND KUMAR', 'ELECTRONIC MECHANICS', 'PA / EO', '9917685217', '2020-09-21', '2021-09-20', 'I.T.I.', '652913'),
+(195, 'EM-2914', 'RAHUL KUMAR', 'ELECTRONIC MECHANICS', 'PA / EO', '9756114782', '2020-09-21', '2021-09-20', 'I.T.I.', '652914'),
+(196, 'EM-2915', 'RAHUL KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-PROD', '8476886860', '2020-09-21', '2021-09-20', 'I.T.I.', '652915'),
+(197, 'EM-2916', 'HEMANT KUMAR', 'ELECTRONIC MECHANICS', 'TES', '9997072405', '2020-09-21', '2021-09-20', 'I.T.I.', '652916'),
+(198, 'EM-2917', 'HARVENDAR SINGH', 'ELECTRONIC MECHANICS', 'ASSY-NVD', '8449706494', '2020-09-21', '2021-09-20', 'I.T.I.', '652917'),
+(199, 'EM-2918', 'PRASHANT KUMAR LAMBA', 'ELECTRONIC MECHANICS', 'ASSY-NVD', '9058641700', '2020-09-21', '2021-09-20', 'I.T.I.', '652918'),
+(200, 'EM-2919', 'MANGLESH', 'ELECTRONIC MECHANICS', 'HOLDING / STORE', '7017602387', '2020-09-21', '2021-09-20', 'I.T.I.', '652919'),
+(201, 'EM-2920', 'DHARMVEER', 'ELECTRONIC MECHANICS', '  MCT ', '9548626508', '2020-09-21', '2021-09-20', 'I.T.I.', '652920'),
+(202, 'EM-2921', 'SACHIN KUMAR', 'ELECTRONIC MECHANICS', 'MM', '9758243052', '2020-09-21', '2021-09-20', 'I.T.I.', '652921'),
+(203, 'EM-2922', 'VINIT KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-NVD', '8006821369', '2020-09-21', '2021-09-20', 'I.T.I.', '652922'),
+(204, 'EM-2923', 'VIPIN KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-PROD', '9997326380', '2020-09-21', '2021-09-20', 'I.T.I.', '652923'),
+(205, 'EM-2924', 'ASHISH VASHISTH', 'ELECTRONIC MECHANICS', 'PPC', '9084492991', '2020-09-21', '2021-09-20', 'I.T.I.', '652924'),
+(206, 'EM-2925', 'DHARAM SINGH', 'ELECTRONIC MECHANICS', 'CMPT', '8057118564', '2020-09-21', '2021-09-20', 'I.T.I.', '652925'),
+(207, 'EM-2926', 'DEEPAK KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-PROD', '7500002532', '2020-09-21', '2021-09-20', 'I.T.I.', '652926'),
+(208, 'EM-2927', 'VIJAY KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-PROD', '6395250328', '2020-09-21', '2021-09-20', 'I.T.I.', '652927'),
+(209, 'EM-2928', 'PRADUMAN KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-PROD', '8433242620', '2020-09-21', '2021-09-20', 'I.T.I.', '652928'),
+(210, 'EM-2929', 'ANKIT NEGI', 'ELECTRONIC MECHANICS', 'ASSY', '8126312308', '2020-09-21', '2021-09-20', 'I.T.I.', '652929'),
+(211, 'EM-2930', 'RAHUL KUMAR', 'ELECTRONIC MECHANICS', 'ASSY-PROD', '7017802982', '2020-09-21', '2021-09-20', 'I.T.I.', '652930'),
+(212, 'F-2931', 'SHUDHANSHU KUMAR', 'FITTER', 'PA / ENV', '6399158280', '2020-09-21', '2021-09-20', 'I.T.I.', '652931'),
+(213, 'F-2932', 'SACHIN KUMAR', 'FITTER', 'PA / MRI', '9458491818', '2020-09-21', '2021-09-20', 'I.T.I.', '652932'),
+(214, 'F-2933', 'RABINDRA KUMAR ', 'FITTER', 'ASSY-PROD', '9927279887', '2020-09-21', '2021-09-20', 'I.T.I.', '652933'),
+(215, 'F-2934', 'SACHIN KUMAR', 'FITTER', 'DARK-ROOM', '7060307916', '2020-09-21', '2021-09-20', 'I.T.I.', '652934'),
+(216, 'F-2935', 'SIDHART GAUTAM', 'FITTER', 'PPC', '7505342319', '2020-09-21', '2021-09-20', 'I.T.I.', '652935'),
+(217, 'F-2936', 'VISHESH KUMAR', 'FITTER', 'CPS / FAB', '8077495548', '2020-09-21', '2021-09-20', 'I.T.I.', '652936'),
+(218, 'F-2937', 'SUNEEL SINGH', 'FITTER', 'CPS / FAB', '9639811096', '2020-09-21', '2021-09-20', 'I.T.I.', '652937'),
+(219, 'F-2938', 'JITENDRA SINGH', 'FITTER', 'ASSY-NVD', '9690265697', '2020-09-21', '2021-09-20', 'I.T.I.', '652938'),
+(220, 'F-2939', 'RITU MOURYA', 'FITTER', 'CPS / FAB', '8650535548', '2020-09-21', '2021-09-20', 'I.T.I.', '652939'),
+(221, 'F-2940', 'MILAN SINGH', 'FITTER', 'MM', '9411353113', '2020-09-21', '2021-09-20', 'I.T.I.', '652940'),
+(222, 'F-2941', 'RAVINDRA KUMAR ', 'FITTER', 'PA / MRI', '9105211635', '2020-09-21', '2021-09-20', 'I.T.I.', '652941'),
+(223, 'F-2942', 'SAURABH KUMAR', 'FITTER', 'ASSY-NVD', '6399098009', '2020-09-21', '2021-09-20', 'I.T.I.', '652942'),
+(224, 'F-2943', 'RIGVENDRA KUMAR', 'FITTER', 'CPS / FAB', '6398499452', '2020-09-21', '2021-09-20', 'I.T.I.', '652943'),
+(225, 'F-2944', 'ANKIT KUMAR', 'FITTER', 'CPS / FAB', '8859198571', '2020-09-21', '2021-09-20', 'I.T.I.', '652944'),
+(226, 'F-2945', 'ANIKET KUMAR', 'FITTER', 'CPS / FAB', '8954969618', '2020-09-21', '2021-09-20', 'I.T.I.', '652945'),
+(227, 'F-2946', 'HIMANSHU BHATYAN', 'FITTER', 'PA / MRI', '9627316441', '2020-09-21', '2021-09-20', 'I.T.I.', '652946'),
+(228, 'F-2947', 'ASWANI KUMAR', 'FITTER', 'ES /AC PLANT', '7900691733', '2020-09-21', '2021-09-20', 'I.T.I.', '652947'),
+(229, 'RAC-2948', 'AKSHAY DWIVEDI', 'MECHANIC R&AC', 'AC / ES', '8273216460', '2020-09-21', '2021-09-20', 'I.T.I.', '652948'),
+(230, 'RAC-2949', 'RAJA', 'MECHANIC R&AC', 'AC / ES', '8171555876', '2020-09-21', '2021-09-20', 'I.T.I.', '652949'),
+(231, 'T-2950', 'AJAY KUMAR', 'TURNER', 'CPS / FAB', '9997537452', '2020-09-21', '2021-09-20', 'I.T.I.', '652950'),
+(232, 'E-2951', 'RAJAN KUMAR', 'ELECTRICIAN', 'ES / ELECTRICAL', '7895615872', '2020-09-23', '2021-09-22', 'I.T.I.', '652951'),
+(233, 'EM-2952', 'AAKASH KUMAR', 'ELECTRONIC MECHANICS', 'ASSY', '7351099919', '2020-09-23', '2021-09-22', 'I.T.I.', '652952'),
+(234, 'F-2953', 'SHEFALI PAL', 'FITTER', 'CMPT', '8218750039', '2020-09-23', '2021-09-22', 'I.T.I.', '652953'),
+(235, 'M-2954', 'SHIKHA PANDEY', 'MACHINIST', 'CPS / FAB', '9389646278', '2020-09-23', '2021-09-22', 'I.T.I.', '652954'),
+(236, 'EM-2955', 'ASHISH SINGH', 'ELECTRONIC MECHANICS', 'PA / TESTING', '8937921076', '2020-10-05', '2021-10-04', 'I.T.I.', '652955'),
+(237, 'EM-2956', 'GIRIRAJ SINGH', 'ELECTRONIC MECHANICS', 'PA / TESTING', '8937000354/9012810040', '2020-10-05', '2021-10-04', 'I.T.I.', '652956'),
+(238, 'F-2957', 'KARAN SINGH', 'FITTER', 'FINISHING / PLTG', '7599123990', '2020-10-05', '2021-10-04', 'I.T.I.', '652957'),
+(239, 'W-2958', 'SANJU', 'WELDER', 'CPS / FAB', '9756385278', '2020-10-05', '2021-10-04', 'I.T.I.', '652958');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roles`
+--
+
+CREATE TABLE `roles` (
+  `id` int(11) NOT NULL,
+  `role_id` int(11) NOT NULL,
+  `role_name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id`, `role_id`, `role_name`) VALUES
+(1, 0, 'admin'),
+(2, 1, 'normal');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `user_id` int(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `role` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `name`, `lname`, `username`, `password`, `role`) VALUES
+(1, 'Saurabh', 'Bharti', 'Saurabh', '202cb962ac59075b964b07152d234b70', 0),
+(2, 'gaurav', 'bharti', 'gaurav', '202cb962ac59075b964b07152d234b70', 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
