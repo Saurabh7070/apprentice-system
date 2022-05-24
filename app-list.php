@@ -89,7 +89,7 @@ include "db.php";
                                     echo "<td>" . $row["punch_id"] . "</td>";
                                     echo "<td>" . $row["status"] . "</td>";
                                     echo "<td><a href='view-details.php?apprentice_no={$row['apprentice_no']}' style='font-size:12px;background:transparent;'>View</a></td>";
-                                    echo '<td><a href="" style="font-size:12px;background:transparent;">Update</a></td>';
+                                    echo "<td><a href='update-details.php?apprentice_no={$row['apprentice_no']}' style='font-size:12px;background:transparent;'>Update</a></td>";
 
                                     echo  "</tr>";
                                 }
