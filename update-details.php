@@ -39,75 +39,81 @@
                                             <th colspan="2">Detailes of <?php echo $row['name']; ?> </th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Enrollment No</td>
-                                            <td><input type="text" name="enrollment_no" value="<?php echo $row['enrollment_no']; ?>"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Apprentice No</td>
-                                            <td><input type="text" name="apprentice_no" value="<?php echo $row['apprentice_no']; ?>"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Name</td>
-                                            <td><input type="text" name="name" value="<?php echo $row['name']; ?>"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Father Name</td>
-                                            <td><input type="text" name="father_name" value="<?php echo $row['father_name']; ?>"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Date of Birth</td>
-                                            <td><input type="text" name="dob" value="<?php echo $row['dob']; ?>"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Address</td>
-                                            <td><input type="text" name="address" value="<?php echo $row['address']; ?>"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Trade</td>
-                                            <td><input type="text" name="trade" value="<?php echo $row['trade']; ?>"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Department</td>
-                                            <td><input type="text" name="department" value="<?php echo $row['department']; ?>"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mobile No.</td>
-                                            <td><input type="text" name="mobile" value="<?php echo $row['mobile']; ?>"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>From</td>
-                                            <td><input type="date" name="from" value="<?php echo $row['from']; ?>"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>To</td>
-                                            <td><input type="date" name="to" value="<?php echo $row['to']; ?>"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Qualification</td>
-                                            <td><select name="qualification" id="qualification">
-                                                    <option value="Graduation">Graduation</option>
-                                                    <option value="Graduation">Diploma</option>
-                                                    <option value="Graduation">I.T.I.</option>
-                                                </select></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Punch ID </td>
-                                            <td><input type="text" name="punch_id" value="<?php echo $row['punch_id']; ?>"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Status </td>
-                                            <td><input type="text" name="status" value="<?php echo $row['status']; ?>"></td>
-                                        </tr>
-                                    </tbody>
+                                    <form action="update-detailes-save.php" method="POST">
+                                        <tbody>
+                                            <tr>
+                                                <td>Enrollment No</td>
+                                                <td><input type="text" name="enrollment_no" value="<?php echo $row['enrollment_no']; ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apprentice No</td>
+                                                <td><input type="text" name="apprentice_no" value="<?php echo $row['apprentice_no']; ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td><input type="text" name="name" value="<?php echo $row['name']; ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Father Name</td>
+                                                <td><input type="text" name="father_name" value="<?php echo $row['father_name']; ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Date of Birth</td>
+                                                <td><input type="text" name="dob" value="<?php echo $row['dob']; ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Address</td>
+                                                <td><input type="text" name="address" value="<?php echo $row['address']; ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Trade</td>
+                                                <td><input type="text" name="trade" value="<?php echo $row['trade']; ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Department</td>
+                                                <td><input type="text" name="department" value="<?php echo $row['department']; ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mobile No.</td>
+                                                <td><input type="text" name="mobile" value="<?php echo $row['mobile']; ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>From</td>
+                                                <td><input type="date" name="from" value="<?php echo $row['from']; ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>To</td>
+                                                <td><input type="date" name="to" value="<?php echo $row['to']; ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Qualification</td>
+                                                <td><select name="qualification" id="qualification">
+                                                        <option value="Graduation">Graduation</option>
+                                                        <option value="Graduation">Diploma</option>
+                                                        <option value="Graduation">I.T.I.</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Punch ID </td>
+                                                <td><input type="text" name="punch_id" value="<?php echo $row['punch_id']; ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Status </td>
+                                                <td><input type="text" name="status" value="<?php echo $row['status']; ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <input type="submit" name="update" value="Update" class="btn">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </form>
                                 </table>
 
                         <?php
                             }
                         }
                         ?>
-
                     </div>
                 </div>
             </div>
