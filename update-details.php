@@ -94,9 +94,20 @@
                                             <tr>
                                                 <td>Qualification</td>
                                                 <td><select name="qualification" id="qualification">
-                                                        <option value="Graduation">Graduation</option>
-                                                        <option value="Diploma">Diploma</option>
-                                                        <option value="I.T.I.">I.T.I.</option>
+                                                        <?php
+                                                        $sql2 = "SELECT * from qualifications";
+                                                        $result2 = mysqli_query($conn, $sql2);
+                                                        if (mysqli_num_rows($result2) > 0) {
+                                                            while ($row1 = mysqli_fetch_assoc($result2)) {
+                                                                if ($row[''] == $row1['status_id']) {
+                                                                    $selected = "selected";
+                                                                } else {
+                                                                    $selected = "";
+                                                                }
+                                                                echo "<option {$selected} value={$row1['status_id']}>{$row1['status']}</option>";
+                                                            }
+                                                        }
+                                                        ?>
                                                     </select></td>
                                             </tr>
                                             <tr>
@@ -108,23 +119,21 @@
                                                 <td>
                                                     <select name="status" id="status">
                                                         <?php
-                                                        $status = $row['status'];
-                                                        $sql1 = "SELECT status from apprentice WHERE apprentice_no = '{$apprentice_no}'";
+                                                        $sql1 = "SELECT * from apprentice_status";
                                                         $result1 = mysqli_query($conn, $sql1);
                                                         if (mysqli_num_rows($result1) > 0) {
                                                             while ($row1 = mysqli_fetch_assoc($result1)) {
-                                                                if ($row['status'] == $row1['status']) {
-                                                                    $seleced = "selected";
+                                                                if ($row['status'] == $row1['status_id']) {
+                                                                    $selected = "selected";
                                                                 } else {
-                                                                    $seleced = "";
+                                                                    $selected = "";
                                                                 }
-                                                                echo "<option $selected value={$row1['status']}>{$row1['status']}</option>";
+                                                                echo "<option {$selected} value={$row1['status_id']}>{$row1['status']}</option>";
                                                             }
                                                         }
                                                         ?>
                                                     </select>
-                                                    <?php echo $row1;
-                                                    echo $status; ?>
+
                                                 </td>
                                             </tr>
                                             <tr>
