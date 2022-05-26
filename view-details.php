@@ -54,19 +54,19 @@
                                             <td><?php echo $row['apprentice_no']; ?></td>
                                         </tr>
                                         <tr>
-                                            <td>Name</td>tr
+                                            <td>Name</td>
                                             <td><?php echo $row['name']; ?></td>
                                         </tr>
                                         <tr>
-                                            <td>Father Name</td>tr
+                                            <td>Father Name</td>
                                             <td><?php echo $row['father_name']; ?></td>
                                         </tr>
                                         <tr>
-                                            <td>Date of birth</td>tr
+                                            <td>Date of birth</td>
                                             <td><?php echo $row['dob']; ?></td>
                                         </tr>
                                         <tr>
-                                            <td>Address</td>tr
+                                            <td>Address</td>
                                             <td><?php echo $row['address']; ?></td>
                                         </tr>
 

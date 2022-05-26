@@ -24,9 +24,14 @@
 
                         <?php include "db.php";
 
-                        $apprentice_no = $_GET['apprentice_no'];
+                        $apprentice_no = "";
 
-                        $sql = "SELECT * from apprentice WHERE apprentice_no = '$apprentice_no'";
+                        if (isset($_GET['apprentice_no'])) {
+
+                            $apprentice_no = $_GET['apprentice_no'];
+                        }
+
+                        $sql = "SELECT * from apprentice WHERE apprentice_no = '{$apprentice_no}'";
                         $result = mysqli_query($conn, $sql) or die("Query failed");
                         if (mysqli_num_rows($result) > 0) {
 
@@ -39,7 +44,8 @@
                                             <th colspan="2">Detailes of <?php echo $row['name']; ?> </th>
                                         </tr>
                                     </thead>
-                                    <form action="update-detailes-save.php" method="POST">
+                                    <form action="update-details-save.php?apprentice_id=<?php echo $apprentice_no; ?>" method="POST">
+                                        <input type="text" name="sn" value="<?php echo $row['sn']; ?>" hidden>
                                         <tbody>
                                             <tr>
                                                 <td>Enrollment No</td>
@@ -89,8 +95,8 @@
                                                 <td>Qualification</td>
                                                 <td><select name="qualification" id="qualification">
                                                         <option value="Graduation">Graduation</option>
-                                                        <option value="Graduation">Diploma</option>
-                                                        <option value="Graduation">I.T.I.</option>
+                                                        <option value="Diploma">Diploma</option>
+                                                        <option value="I.T.I.">I.T.I.</option>
                                                     </select></td>
                                             </tr>
                                             <tr>
@@ -99,7 +105,27 @@
                                             </tr>
                                             <tr>
                                                 <td>Status </td>
-                                                <td><input type="text" name="status" value="<?php echo $row['status']; ?>"></td>
+                                                <td>
+                                                    <select name="status" id="status">
+                                                        <?php
+                                                        $status = $row['status'];
+                                                        $sql1 = "SELECT status from apprentice WHERE apprentice_no = '{$apprentice_no}'";
+                                                        $result1 = mysqli_query($conn, $sql1);
+                                                        if (mysqli_num_rows($result1) > 0) {
+                                                            while ($row1 = mysqli_fetch_assoc($result1)) {
+                                                                if ($row['status'] == $row1['status']) {
+                                                                    $seleced = "selected";
+                                                                } else {
+                                                                    $seleced = "";
+                                                                }
+                                                                echo "<option $selected value={$row1['status']}>{$row1['status']}</option>";
+                                                            }
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                    <?php echo $row1;
+                                                    echo $status; ?>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td colspan="2">
@@ -113,6 +139,7 @@
                         <?php
                             }
                         }
+
                         ?>
                     </div>
                 </div>

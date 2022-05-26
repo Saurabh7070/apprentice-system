@@ -63,13 +63,13 @@ include "db.php";
                                 $selected = $_POST['Qualification'];
                             }
                             if ($selected == NULL || $selected == "All") {
-                                $result = mysqli_query($conn, "SELECT * FROM apprentice");
+                                $result = mysqli_query($conn, "SELECT * FROM apprentice ORDER BY SN");
                             } else if ($selected == "B.tech") {
-                                $result = mysqli_query($conn, "SELECT * FROM apprentice WHERE Qualification = 'B.tech'");
+                                $result = mysqli_query($conn, "SELECT * FROM apprentice WHERE Qualification = 'B.tech' ORDER BY SN");
                             } else if ($selected == "Diploma") {
-                                $result = mysqli_query($conn, "SELECT * FROM apprentice WHERE Qualification = 'Diploma'");
+                                $result = mysqli_query($conn, "SELECT * FROM apprentice WHERE Qualification = 'Diploma' ORDER BY SN");
                             } else if ($selected == "ITI") {
-                                $result = mysqli_query($conn, "SELECT * FROM apprentice WHERE Qualification = 'I.T.I.'");
+                                $result = mysqli_query($conn, "SELECT * FROM apprentice WHERE Qualification = 'I.T.I.' ORDER BY SN");
                             }
 
 
